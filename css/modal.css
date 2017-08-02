@@ -1,0 +1,75 @@
+/* Modal CSS */
+* {
+	font-family: sans-serif;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:first-child {
+	position: absolute;
+	top: 35%;
+	left: 35%;
+	font-size: 72px;
+	font-weight: bold;
+	padding: 10px 20px;
+	background: #ff1e1e;
+	color: #fff;
+}
+
+p {
+	margin-top: 0;
+	border-bottom: 2px solid #666;
+	margin-bottom: 15px;
+    padding-bottom: 15px;
+	font-size: 18px;
+	text-align: justify;
+}
+
+.modal-container {
+	position: fixed;
+	background: #fff;
+	border-radius: 5px;
+	left: 50%;
+	padding: 20px;
+	max-width: 600px;
+	width: 70%;
+	
+	-webkit-transform: translate(-50%, -200%);
+	-ms-transform: translate(-50%, -200%);
+	transform: translate(-50%, -200%);
+	
+	-webkit-transition: -webkit-transform 500ms ease-out;
+	-ms-transition: -ms-	transform 500ms ease-out;
+	transition: transform 500ms ease-out;
+}
+
+.modal:before {
+	content: "";
+	position: fixed;
+	display: none;
+	background: rgba(0,0,0,0.8);
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+}
+
+.modal:target:before {
+	display: block;
+}
+
+.modal:target .modal-container {
+	top: 20%;
+
+	-webkit-transform: translate(-50%, 0);
+	-ms-transform: translate(-50%, 0);
+	transform: translate(-50%, 0);
+}
+
+
+
+
+
+
